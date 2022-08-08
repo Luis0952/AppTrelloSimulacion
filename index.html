@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <scrip src=" https://cdn.jsdelivr.net/gh/bevacqua/dragula@3.7.3/dist/dragula.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Simulación Trello</title>
+</head>
+<body>
+    <!--modal-->
+    <div class="modal" id="todo_form">
+        <div class="header">
+            <div class="title">Agregar tarea</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <aside class="aside-app" id="modalNewTask">
+                <div class="l-container">
+                  <div class="form-container">
+                    <h2 class="aside-form-title">Nueva Tarea</h2>
+                    <form class="form-new-task" id="formNewTask">
+                      <div class="row-form">
+                        <label for="titleTask" class="form-new-task__label">Título:</label>
+                        <select name="" id="select_name_Resp">
+                        </select>
+                        <select name="" id="select__name-title">
+                        </select>
+                        <select name="" id="select__name-details">
+                        </select>
+                      </div>
+                    </form>
+                </div>
+            </aside>
+            <input type="date" name="Fecha Tarea" id="Fecha_Tarea">
+            <input type="submit" value="Adicionar tarea" id="todo_submit">
+        </div>
+    </div>
+    <!--    Todo      -->
+<div class="todo-container">
+    <div class="status" id="no_status">
+        <h1>Sin Estatus</h1>
+        <button id="add-btn" data-target-modal="#todo_form">+ Adicionar Tarea</button>
+        <div class="todo" draggable="true">
+            Agregar tarea
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <div class="status">
+        <h1>No iniciada</h1>
+    </div>
+    <div class="status">
+        <h1>En Progreso</h1>
+    </div>
+    <div class="status">
+        <h1>Completada</h1>
+    </div>
+</div>
+<div id="overlay"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/sortable.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
